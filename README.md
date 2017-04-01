@@ -4,7 +4,7 @@
 
 You need to:
 - Create a [Github API token](https://github.com/settings/tokens)
-- Get a Digital [Ocean token](https://cloud.digitalocean.com/settings/api/)
+- Get a [Digital Ocean token](https://cloud.digitalocean.com/settings/api/)
 - Generate a random secret for DO - use a [random password generator](https://lastpass.com/generatepassword.php)
 
 1) Ensure you have [terraform installed](https://www.terraform.io/intro/getting-started/install.html).
