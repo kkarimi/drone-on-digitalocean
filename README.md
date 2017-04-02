@@ -13,6 +13,18 @@ You need to:
 
 3) Run with from CLI:
 
+With Docker:
+```sh
+docker run -i -t hashicorp/terraform:light terraform apply \
+    -var "DO_TOKEN=<YOUR-DIGITAL-OCEAN-TOKEN>" \
+    -var "private_key=<PATH-TO-YOUR-PRIVATE-KEY>" \
+    -var "public_key=<PATH-TO-YOUR-PUBLIC-KEY>"
+    -var "DRONE_GITHUB_CLIENT=<VCS-CLIENT-ID>" \
+    -var "DRONE_GITHUB_SECRET=<VCS-CLIENT-SECRET>"
+```
+
+OR like it's still 2013:
+
 ```sh
 terraform apply \
     -var "DO_TOKEN=<YOUR-DIGITAL-OCEAN-TOKEN>" \
