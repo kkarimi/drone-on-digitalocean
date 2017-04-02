@@ -2,16 +2,14 @@
 
 *Deploy Drone.io CI on Digital Ocean with Terraform*
 
-You need to:
+First you need to:
 - Create a [Github API token](https://github.com/settings/tokens)
 - Get a [Digital Ocean token](https://cloud.digitalocean.com/settings/api/)
 - Generate a random secret for DO - use a [random password generator](https://lastpass.com/generatepassword.php)
 
-1) Ensure you have [terraform installed](https://www.terraform.io/intro/getting-started/install.html).
+Then in order to run:
 
-2) Clone the repository
-
-3) Run with from CLI:
+- Clone the repository and run with in docker with:
 
 With Docker:
 ```sh
@@ -24,6 +22,8 @@ docker run -i -t hashicorp/terraform:light terraform apply \
 ```
 
 OR like it's still 2013:
+
+Ensure you have [terraform installed](https://www.terraform.io/intro/getting-started/install.html) and then:
 
 ```sh
 terraform apply \
