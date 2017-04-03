@@ -45,10 +45,6 @@ droplet_region          = "LON1"
 droplet_size            = "512"
 DO_TOKEN                = ""
 
-# SSH
-public_key              = "/path/to/your/key.pub"
-private_key             = "/path/to/your/key"
-
 # GitHub API token
 DRONE_GITHUB_CLIENT     = ""
 DRONE_GITHUB_SECRET     = ""
