@@ -30,7 +30,7 @@ terraform apply \
     -var "DRONE_GITHUB_SECRET=<VCS-CLIENT-SECRET>"
 ```
 
-Alternative, you can set the following environment variables to not have to declare vars:
+Alternatively, you can set the following environment variables to not have to declare vars:
 
 TF_VAR_DO_TOKEN
 TF_VAR_DRONE_GITHUB_CLIENT
