@@ -15,8 +15,6 @@ With Docker:
 ```sh
 docker run -i -t hashicorp/terraform:light terraform apply \
     -var "DO_TOKEN=<YOUR-DIGITAL-OCEAN-TOKEN>" \
-    -var "private_key=<PATH-TO-YOUR-PRIVATE-KEY>" \
-    -var "public_key=<PATH-TO-YOUR-PUBLIC-KEY>"
     -var "DRONE_GITHUB_CLIENT=<VCS-CLIENT-ID>" \
     -var "DRONE_GITHUB_SECRET=<VCS-CLIENT-SECRET>"
 ```
@@ -28,11 +26,15 @@ Ensure you have [terraform installed](https://www.terraform.io/intro/getting-sta
 ```sh
 terraform apply \
     -var "DO_TOKEN=<YOUR-DIGITAL-OCEAN-TOKEN>" \
-    -var "private_key=<PATH-TO-YOUR-PRIVATE-KEY>" \
-    -var "public_key=<PATH-TO-YOUR-PUBLIC-KEY>"
     -var "DRONE_GITHUB_CLIENT=<VCS-CLIENT-ID>" \
     -var "DRONE_GITHUB_SECRET=<VCS-CLIENT-SECRET>"
 ```
+
+Alternatively, you can set the following environment variables to not have to declare vars:
+
+TF_VAR_DO_TOKEN
+TF_VAR_DRONE_GITHUB_CLIENT
+TF_VAR_DRONE_GITHUB_SECRET
 
 OR create a `terraform.tfvars` file in root with the content below.
 
@@ -42,10 +44,6 @@ droplet_name            = "drone-ci"
 droplet_region          = "LON1"
 droplet_size            = "512"
 DO_TOKEN                = ""
-
-# SSH
-public_key              = "/path/to/your/key.pub"
-private_key             = "/path/to/your/key"
 
 # GitHub API token
 DRONE_GITHUB_CLIENT     = ""
@@ -59,4 +57,3 @@ DRONE_SECRET            = ""
 
 
 - [Drone.io Documentation](http://readme.drone.io/setup/overview/)
-
